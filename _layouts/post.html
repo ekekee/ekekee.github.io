@@ -1,17 +1,7 @@
----
-layout: default
----
-
-<article class="post">
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
-  {% include disqus.html %}
-</article>
+{% include header.html %}
+	<section class="box special">
+		<h3>{{ page.title }}</h3>
+		<span class="date">{{ page.date | date_to_string }}</span>
+		{{ page.content }}
+	</section>
+{% include footer.html %}
